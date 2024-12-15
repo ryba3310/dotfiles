@@ -43,14 +43,17 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-map <leader>tn :tabnew<cr>
-map <leader>t<leader> :tabnext
-map <leader>tm :tabmove
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
+" nnoremap <leader>tn :tabnew<cr>
+" map <leader>t :tabnext
+" nnoremap <leader>tm :tabmove
+" map <leader>tc :tabclose<cr>
+" map <leader>to :tabonly<cr>
 
 inoremap jk <esc>
 inoremap kj <esc>
 
 set ignorecase
 set smartcase
+
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>

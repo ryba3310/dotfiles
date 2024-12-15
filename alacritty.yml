@@ -1,7 +1,6 @@
   # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
-#
 # Imports are loaded in order, skipping all missing files, with the importing
 # file being loaded last. If a field is already present in a previous import, it
 # will be replaced.
@@ -158,7 +157,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 15.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -558,7 +557,7 @@ hints:
   #   - MoveViModeCursor
   #       Move the vi mode cursor to the beginning of the hint.
   enabled:
-  - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+  - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:|/|\\.|[a-zA-Z]{1,12}\\.|\\$|([a-zA-Z]+_)+)\
             [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
     hyperlinks: true
     action: Copy
@@ -570,6 +569,17 @@ hints:
       key: O
       mods: Control|Shift
 
+    enabled:
+  - regex: '((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?){4}|[0-9]{3,20}'
+    hyperlinks: true
+    action: Copy
+    post_processing: true
+    mouse:
+      enabled: true
+      mods: None
+    binding:
+      key: I
+      mods: Control|Shift
 # Mouse bindings
 #
 # Mouse bindings are specified as a list of objects, much like the key

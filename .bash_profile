@@ -1,4 +1,4 @@
-export PATH="$HOME/tools/node-v14.15.4-linux-x64/bin:$PATH"
+#export PATH="$HOME/tools/node-v14.15.4-linux-x64/bin:$PATH"
 . "$HOME/.cargo/env"
 
 # load .bashrc for tmux
