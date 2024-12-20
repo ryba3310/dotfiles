@@ -1,0 +1,10 @@
+[Unit]
+After=network-online.target
+Before=remote-fs.target
+[Mount]
+Type=rclone
+What=union:
+Where=/home/admin/Music
+Options=rw,vfs-cache-mode=full,vfs-disk-space-total-size=2G,vfs-read-ahead=200M,buffer-size=300M
+[Install]
+WantedBy=multi-user.target
